@@ -1,16 +1,26 @@
 <template>
     <div class="container">
-        <CardElement />
+        <CardElement v-for="CardElement in store.YuGiOhList"/>
     </div>
 </template>
 
 <script>
-    import CardElement from './CardElement.vue'
+    import CardElement from './CardElement.vue';
+
+//store.js
+import { store } from '../store.js';
 
 export default {
     components: {
         CardElement,
-    } 
+    },
+    data(){
+        return{
+            store
+        }
+    },
+    created(){
+    }
 }
 </script>
 
