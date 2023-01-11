@@ -1,22 +1,22 @@
 <template>
     <div class="container">
-        <CardContainer />
+        <CardElement />
     </div>
 </template>
 
 <script>
-import CardContainer from './CardContainer.vue'
+    import CardElement from './CardElement.vue'
 
 export default {
-    components:{
-        CardContainer,
-    }
+    components: {
+        CardElement,
+    } 
 }
 </script>
 
 <style lang="scss" scoped>
-
-    div.container{
+    .container{
+        background-color: white;
         padding: 60px 100px;
     }
 </style>
