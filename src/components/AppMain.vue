@@ -28,8 +28,8 @@ export default {
                 params: {
                 }
             })
-                .then(function (response) {
-                    console.log(response);
+                .then((response) => {
+                    this.store.YuGiOhList = response.data.data;
                 })
                 .catch(function (error) {
                     console.log(error);
