@@ -1,6 +1,8 @@
 <template>
     <div class="card">
         <img :src="imgUrl" alt="">
+        <h2>{{ name }}</h2>
+        <p>{{ archetype }}</p>
     </div>
 </template>
 
@@ -8,7 +10,9 @@
 
 export default {
     props:{
-        imgUrl: String
+        imgUrl: String,
+        name: String,
+        archetype: String
     }
 }
 </script>
@@ -17,10 +21,21 @@ export default {
 
     @use '../styles/partials/variables' as *;
     .card{
-        height: 420px;
-        width: 280px;
+        width: 421px;
         background-color: $main-color;
-        padding: 20px;
         margin-bottom: 20px;
+        padding-bottom: 2rem;
+
+        h2{
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 2rem 0;
+        }
+
+        p{
+            font-size: 2rem;
+            text-align: center;
+        }
     }
 </style>
