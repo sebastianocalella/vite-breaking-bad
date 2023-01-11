@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <CardElement v-for="CardElement in store.YuGiOhList"/>
+        <CardElement v-for="CardElement in store.YuGiOhList"
+            :imgUrl="CardElement.card_images[0].image_url"/>
     </div>
 </template>
 
@@ -26,6 +27,9 @@ export default {
 
 <style lang="scss" scoped>
     .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         background-color: white;
         padding: 60px 100px;
     }

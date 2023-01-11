@@ -1,13 +1,15 @@
 <template>
     <div class="card">
-        <h2>card di prova</h2>
+        <img :src="imgUrl" alt="">
     </div>
 </template>
 
 <script>
 
 export default {
-    
+    props:{
+        imgUrl: String
+    }
 }
 </script>
 
@@ -19,5 +21,6 @@ export default {
         width: 280px;
         background-color: $main-color;
         padding: 20px;
+        margin-bottom: 20px;
     }
 </style>

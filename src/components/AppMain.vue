@@ -30,6 +30,7 @@ export default {
             })
                 .then((response) => {
                     this.store.YuGiOhList = response.data.data;
+                    console.log(this.store.YuGiOhList)
                 })
                 .catch(function (error) {
                     console.log(error);
