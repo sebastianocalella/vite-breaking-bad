@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        <h2>header</h2>
+        <h1>Yu-Gi-Oh Api</h1>
     </div>
 </template>
 
@@ -11,6 +11,6 @@ export default {
 }
 </script>
 
-<style lang="">
+<style lang="scss" scoped>
     
 </style>

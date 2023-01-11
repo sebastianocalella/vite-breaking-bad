@@ -20,6 +20,10 @@
   </main>
 </template>
 
-<style>
-
+<style lang="scss">
+  header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
 </style>
