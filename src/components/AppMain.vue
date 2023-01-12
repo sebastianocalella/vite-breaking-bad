@@ -1,21 +1,25 @@
 <template>
     <div class="container">
+        <ArchetypesFilter />
         <CardContainer />
     </div>
 </template>
 
 <script>
-//components
-import CardContainer from './CardContainer.vue';
 
 //store.js
 import { store } from '../store.js';
 
 import axios from 'axios';
 
+//components
+import ArchetypesFilter from './ArchetypesFilter.vue';
+import CardContainer from './CardContainer.vue';
+
 export default {
     components: {
         CardContainer,
+        ArchetypesFilter
     },
     data() {
         return {
