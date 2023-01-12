@@ -18,6 +18,7 @@ export default {
         return{
             archetypeList:['Alien', 'Laval', 'Vylon', 'Inzektor', 'Umi', 'Gusto'],
             selectedArchetype: null
+            
         }
     }
 }
