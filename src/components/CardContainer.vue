@@ -3,7 +3,11 @@
         <CardElement v-for="CardElement in store.YuGiOhList"
             :imgUrl="CardElement.card_images[0].image_url"
             :name="CardElement.name"
-            :archetype="CardElement.archetype"/>
+            :archetype="CardElement.archetype"
+            :type="CardElement.type"
+            :race="CardElement.race"
+            :effect="CardElement.desc"
+            :price="CardElement.card_prices"/>
     </div>
 </template>
 
