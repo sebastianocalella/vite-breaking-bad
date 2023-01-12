@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        <ArchetypesFilter />
+    <div  class="container">
+        <ArchetypesFilter @archetypeFilter="console"  />
         <CardContainer />
     </div>
 </template>
@@ -40,6 +40,9 @@ export default {
                 .catch(function (error) {
                     console.log(error);
                 })
+        },
+        console(value){
+            console.log(value);
         }
     },
     created() {

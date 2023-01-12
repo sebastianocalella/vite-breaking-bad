@@ -3,10 +3,10 @@
         <label for="archetype-select">choose an Archetype:</label>
         <select 
             v-model="selectedArchetype" 
-            @change="$emit('archetypeFilter')"
+            @change="$emit('archetypeFilter',selectedArchetype)"
             name="archetypes" 
             id="archetype-select">
-            <option v-for="(archetype,index) in this.archetypeList" :value="archetype">{{archetype}}</option>
+            <option v-for="(archetype,index) in archetypeList" :value="archetype">{{archetype}}</option>
         </select>
     </div>
 </template>
