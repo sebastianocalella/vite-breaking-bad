@@ -1,7 +1,11 @@
 <template lang="">
     <div class="container">
         <label for="archetype-select">choose an Archetype:</label>
-        <select name="archetypes" id="archetype-select">
+        <select 
+            v-model="selectedArchetype" 
+            @change="$emit('archetypeFilter')"
+            name="archetypes" 
+            id="archetype-select">
             <option v-for="(archetype,index) in this.archetypeList" :value="archetype">{{archetype}}</option>
         </select>
     </div>
@@ -12,7 +16,8 @@
 export default {
     data(){
         return{
-            archetypeList:['Alien', 'Laval', 'Vylon', 'Inzektor', 'Umi', 'Gusto']
+            archetypeList:['Alien', 'Laval', 'Vylon', 'Inzektor', 'Umi', 'Gusto'],
+            selectedArchetype: null
         }
     }
 }
