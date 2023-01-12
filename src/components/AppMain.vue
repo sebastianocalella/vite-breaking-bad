@@ -1,6 +1,6 @@
 <template>
     <div  class="container">
-        <ArchetypesFilter @archetypeFilter="console"  />
+        <ArchetypesFilter @archetypeFilter="getYuGiOhList"  />
         <CardContainer />
     </div>
 </template>
@@ -27,11 +27,12 @@ export default {
         }
     },
     methods: {
-        getYuGiOhList() {
+        getYuGiOhList(value) {
             axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
                 params: {
                     num: 10,
-                    offset: 0
+                    offset: 0,
+                    archetype: value
                 }
             })
                 .then((response) => {
@@ -41,9 +42,6 @@ export default {
                     console.log(error);
                 })
         },
-        console(value){
-            console.log(value);
-        }
     },
     created() {
         this.getYuGiOhList();
